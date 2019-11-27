@@ -7,17 +7,14 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
     <div>
         <div className="container-fluid">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a className="navbar-brand">Connected Gamers</a>
-                <ul className="nav mr-auto ">
+                <ul className="nav mr-auto btn-group btn-group-nav-items "> 
                     <li className="nav-time">
-                        <a className="nav-link active">Forum</a>
+                        <a className="nav-link" href="#"><button className="btn btn-outline-primary btn-lg">Forum</button></a>
                     </li>
                     <li className="nav-time">
-                        <a className="nav-link active">Profile</a>
-                    </li>
-                    <li className="nav-time">
-                        <a className="nav-link active">About/Contact</a>
+                        <a className="nav-link" href="#"><button className="btn btn-outline-info btn-lg">About</button></a>
                     </li>
                 </ul>
                 <form className="form-inline">
@@ -35,9 +32,6 @@ ReactDOM.render(
             <a class="twitter-timeline" data-theme="dark" data-link-color="#9266CC" href="https://twitter.com/VGFGamers?ref_src=twsrc%5Etfw">Tweets by VGFGamers</a>
         </div>
     </div>
-        
-        
-
     , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
