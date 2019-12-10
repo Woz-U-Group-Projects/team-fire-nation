@@ -21,7 +21,7 @@ const Index = ({ pathname }) => {
         return < Registration />;
         case '/about':
         return <About />;
-        case '/topics':
+        case '/forum':
         return <Forum />;
         default:
         return <Home />;
