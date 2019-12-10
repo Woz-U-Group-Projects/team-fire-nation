@@ -6,10 +6,10 @@ import Home from './screens/Home';
 import Header from './component/Header';
 
 function App() {
-  return (
+  //return (
     // <Header title="Home" />
     // <Home uri="http://localhost:3000/" />
-  );
+  //);
 }
 
 export default App;
