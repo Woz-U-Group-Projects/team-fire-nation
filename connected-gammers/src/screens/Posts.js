@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../component/Header';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 var Post = ({ match }) => (
   <div>
-    <h2>Post</h2>
+    <Header title="Post" />
 
     
     <Route path={`${match.url}/:postid`} component={Post} />

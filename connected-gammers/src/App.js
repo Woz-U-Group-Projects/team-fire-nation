@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Home from './components/screens/Home';
+
+import Home from './screens/Home';
+import Header from './component/Header';
 
 function App() {
   return (
-    <Home uri="http://localhost:3001/Home" />
+    // <Header title="Home" />
+    // <Home uri="http://localhost:3000/" />
   );
 }
 
