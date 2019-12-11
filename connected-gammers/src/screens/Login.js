@@ -11,25 +11,28 @@ import Header from '../component/Header';
 ___________________*/
 
 const Login = () => (
-   <div>
-     <Header title="Login" />
-     <div>
+  <div>
+    <div className="container-fluid">
+    <Header title="Login" />
       <form className="form">
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input type="text" name="username" placeholder="Username"></input>
+        <div className="row">
+          <div className="col ml-auto offset-sm-3">
+            <div className="form-group col-md">  
+              <label htmlFor="username" className="col-sm col-form-label">Username</label>  
+              <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
+              <small id="emailHelp" class="form-text text-muted">The Username used on account creation</small>
+            </div>
+            <div className="form-group col-md">
+              <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
+              <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
+              <small id="emailHelp" class="form-text text-muted">Do Not Forget. At this time we cannot recover.</small>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" placeholder="Password"></input>
-          </div>
-      </form>
-     </div>
-     <footer className="footer">
-        <button>Go back</button>
-        <button>Login</button>
-     </footer>
-   </div>
+        </div>
+      </form>  
+    </div>
+  </div>
+    
 );
 
 export default Login;

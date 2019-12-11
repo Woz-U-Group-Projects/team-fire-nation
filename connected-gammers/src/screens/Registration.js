@@ -33,7 +33,7 @@ const Registration = () => (
                     </div>
                 </label>
                 <label htmlFor="username" className="col-sm col-form-label">Username
-                    <div className="form-group col-sm26">    
+                    <div className="form-group col-sm-6">    
                         <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
                         <small id="emailHelp" class="form-text text-muted">Public Name that will be view by others</small>
                     </div>
