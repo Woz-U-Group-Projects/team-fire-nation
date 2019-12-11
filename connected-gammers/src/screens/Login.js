@@ -12,7 +12,7 @@ const Login = () => <Header title="Login" />;
 //   render() {
 //     return (
 //       <div className="base-container" ref={this.props.containerRef}>
-//         <div className="header"><Header title="Login" /></div>
+//         <div className="header">Login</div>
 //         <div className="content">
 //           <div className="image">
 //             {/* <img src={loginImg} /> */}
