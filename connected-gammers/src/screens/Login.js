@@ -29,6 +29,14 @@ const Login = () => (
             </div>
           </div>
         </div>
+        <div className="form-group row just">
+          <div class="col-sm-2">
+            <button type="button" className="btn btn-primary mb-2">Go back</button>
+          </div>
+          <div class="col-sm-2">
+            <button type="submit" className="btn btn-primary mb-2">Login</button>
+          </div>
+        </div>
       </form>  
     </div>
   </div>

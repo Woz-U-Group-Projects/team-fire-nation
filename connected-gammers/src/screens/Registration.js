@@ -63,12 +63,12 @@ const Registration = () => (
                      </select>
                 </div>
             </div>
-            <div className="form-group row just">
+            <div className="form-row">
                 <div class="col-sm-2">
-                    <button type="button" className="btbtn btn-primary mb-2">Go back</button>
+                    <button type="button" className="btn btn-primary mb-2">Go back</button>
                 </div>
                 <div class="col-sm-2">
-                    <button type="submit" className="btbtn btn-primary mb-2">Signup</button>
+                    <button type="submit" className="btn btn-primary mb-2">Signup</button>
                 </div>
             </div>
             
