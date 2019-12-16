@@ -22,7 +22,7 @@ function installPM2() {
   // ssss local project to the remote server
   function transferProjectToRemote(failed, successful) {
     return ssh.putDirectory(
-      '../hackathon-starter',
+      '../connected-gammers',
       '/home/ubuntu/team-fire-nation/connected-gamers',
       {
         recursive: true,
@@ -85,9 +85,9 @@ function installPM2() {
   ssh
       .connect({
         // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
-        host: '00.00.00.00',
+        host: '54.211.73.38',
         username: 'ubuntu',
-        privateKey: '.\server\keys\teamFireNationKey.pem'
+        privateKey: 'teamFireNationKey.pem'
       })
       .then(function() {
         console.log('SSH Connection established.');
