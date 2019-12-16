@@ -95,7 +95,7 @@ function installPM2() {
         return installPM2();
       })
       .then(function() {
-        console.log('Creating `hackathon-starter-temp` folder.');
+        console.log('Creating `connected-gamers-temp` folder.');
         return createRemoteTempFolder();
       })
       .then(function(result) {
