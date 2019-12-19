@@ -1,26 +1,19 @@
 {
-  "name": "connected-gammers",
-  "version": "0.1.0",
-  "private": true,
+  "name": "connected-gamers",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "node-cmd": "^3.0.0",
-    "node-ssh": "^6.0.0",
+    "bootstrap": "^4.4.0",
+    "mysql2": "^2.0.2",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "react-scripts": "3.3.0",
-    "sequelize": "^4.43.0"
-=======
-    "react-scripts": "3.3.0"
->>>>>>> parent of 692f08c... Profile Example made
-=======
-    "react-scripts": "3.3.0"
->>>>>>> parent of 692f08c... Profile Example made
+    "react-scripts": "^3.2.0",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,19 +21,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "",
+  "license": "ISC"
 }

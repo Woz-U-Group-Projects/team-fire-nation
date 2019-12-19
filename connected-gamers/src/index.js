@@ -1,3 +1,7 @@
+var express = require('express');
+var router = express.Router();
+var mysql = require('mysql2');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,6 +14,23 @@ import Forum from './screens/Forum';
 import Login from './screens/Login';
 import Registration from './screens/Registration';
 import Profile from './screens/Profile';
+
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'Password1!',
+  database: 'ConnectedGamersDB'
+});
+
+connection.connect(function(err) {
+  if (err) {
+    console.error(err.message);
+    return;
+  }
+  console.log('Connected to database!');
+})
+
+
 
 const Index = ({ pathname }) => {
     switch (pathname) {
