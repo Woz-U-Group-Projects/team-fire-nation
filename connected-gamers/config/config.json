@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Password1!",
-    "database": "connectedgamersdb",
+    "database": "cgdb",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
