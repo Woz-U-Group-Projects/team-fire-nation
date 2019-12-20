@@ -32,10 +32,6 @@
                     "field": "Password",
                     "seqType": "Sequelize.STRING"
                 },
-                "Bio": {
-                    "field": "Bio",
-                    "seqType": "Sequelize.STRING"
-                },
                 "createdAt": {
                     "field": "createdAt",
                     "seqType": "Sequelize.DATE"
@@ -48,5 +44,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 1
 }
