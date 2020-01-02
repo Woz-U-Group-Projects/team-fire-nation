@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../models');
+var authService = require('../services/auth');
 
 /* Signup */
 router.get('/signup', function(req, res, next) {
@@ -17,7 +18,7 @@ router.post('/signup', function(req, res, next) {
         FirstName: req.body.firstName,
         LastName: req.body.lastName,
         Email: req.body.email,
-        Password: req.body.password
+        Password: authService.hashPassword(req.body.password)
       }
     })
     .spread(function(result, created) {
@@ -34,21 +35,62 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
-router.post('/login', function(req, res, next) {
-  models.users
-    .findOne({
-      where: {
-        Username: req.body.username,
-        Password: req.body.password
-      }
-    })
-    .then(user => {
-      if (user) {
-        res.send('Login succeeded!');
+router.post('/login', function (req, res, next) {
+  models.users.findOne({
+    where: {
+      Username: req.body.username
+    }
+  }).then(user => {
+    if (!user) {
+      console.log('User not found')
+      return res.status(401).json({
+        message: "Login Failed"
+      });
+    } else {
+      let passwordMatch = authService.comparePasswords(req.body.password, user.Password);
+      if (passwordMatch) {
+        let token = authService.signUser(user);
+        res.cookie('jwt', token);
+        res.send('Login successful');
       } else {
-        res.send('Invalid login!');
+        console.log('Wrong password');
+        res.send('Wrong password');
       }
-    });
+    }
+  });
+});
+
+
+/* Lougout */
+router.get('/logout', function (req, res) {
+
+});
+router.get('/logout', function (req, res, next) {
+  res.cookie('jwt', "", { expires: new Date(0) });
+  res.send('Logged out');
+});
+
+/* Profile */
+router.get('/profile', function (req, res) {
+
+});
+
+router.get('/profile', function (req, res, next) {
+  let token = req.cookies.jwt;
+  if (token) {
+    authService.verifyUser(token)
+      .then(user => {
+        if (user) {
+          res.send(JSON.stringify(user));
+        } else {
+          res.status(401);
+          res.send('Invalid authentication token');
+        }
+      });
+  } else {
+    res.status(401);
+    res.send('Must be logged in');
+  }
 });
 
 
