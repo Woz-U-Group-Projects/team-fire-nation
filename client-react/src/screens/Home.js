@@ -11,7 +11,7 @@ const Home = () => (
         <div className="row">
             <div className="col col-md-6">
                 <h3>Feed: Did you know gaming?</h3>
-                <a class="twitter-timeline" href="https://twitter.com/didyouknowgamin?ref_src=twsrc%5Etfw">Tweets by didyouknowgamin</a> 
+                <a height="700" class="twitter-timeline" href="https://twitter.com/didyouknowgamin?ref_src=twsrc%5Etfw">Tweets by didyouknowgamin</a> 
             </div>
             <div className="col col-md-6">
                 <div className="row">
