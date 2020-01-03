@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var models = require('./models'); //Added - Connects models folder.
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -11,7 +12,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'js')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -37,5 +38,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+models.sequelize.sync().then(function () { // Added - Show server connected
+  console.log("DB Sync'd up")
+});
+
 
 module.exports = app;

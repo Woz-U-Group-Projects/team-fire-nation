@@ -25,7 +25,7 @@ var authService = {
       console.log(err);
       return null;
     }
-  },
+  }, 
 
   hashPassword: function(plainTextPassword) {
     let salt = bcrypt.genSaltSync(10);
@@ -37,7 +37,8 @@ var authService = {
     return bcrypt.compareSync(plainTextPassword, hashedPassword)
   }
   
+
   
-  
+
 }
 module.exports = authService;
