@@ -1,3 +1,10 @@
+How to create DB: 
+1. Open MySQL Workbench
+2. Check your password. Should be "Password1!"
+3. Command: sequelize db:create
+4. Command: sequelize db:migrate
+
+
 - Created React App --Named client
 - Created Express App --Named api
 - api 
@@ -11,6 +18,8 @@ bcryptjs
 --actions: 
 sequelize init
 dir: service/auth.js created and set up
+User model creadted
+initial migration
 
 
 - Other
