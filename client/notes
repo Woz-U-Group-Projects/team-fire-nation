@@ -1,0 +1,21 @@
+- Created React App --Named client
+- Created Express App --Named api
+- api 
+--Dependencies: 
+nodemon
+mysql2
+jsonwebtoken
+sequelize
+bcryptjs
+
+--actions: 
+sequelize init
+dir: service/auth.js created and set up
+
+
+- Other
+-- config/config.json:
+Password and DB name set to work with MySQL Workbench
+
+
+
