@@ -5,7 +5,7 @@ var authService = require('../services/auth');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('Hello Everyone');
 });
 
 /* Sign Up */
@@ -19,7 +19,7 @@ router.post('/signup', function (req, res, next) {
         FirstName: req.body.firstName,
         LastName: req.body.lastName,
         Email: req.body.email,
-        Password: authService.hashPassword(req.body.password) //<--- Change to this code here
+        Password: authService.hashPassword(req.body.password)
       }
     })
     .spread(function (result, created) {
