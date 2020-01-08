@@ -11,17 +11,17 @@ import Signup from './screens/Signup';
 import Profile from './screens/Profile';
 import Home from './screens/Home';
 
-const Index = ({ pathname }) => {
+const Index = ({pathname}) => {
   switch (pathname) {
     case '/about':
       return <About />;
-    case '/Forum':
+    case '/forum':
       return <Forum />;
-    case '/Login':
+    case '/login':
       return <Login />;
-    case '/Signup':
+    case '/signup':
       return <Signup />;
-    case '/Profile':
+    case '/profile':
       return <Profile />;
     default:
       return <Home />;

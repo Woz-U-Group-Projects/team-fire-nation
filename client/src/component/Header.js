@@ -18,8 +18,8 @@ const Header = ({ title }) => (
             <li className="nav-item"><a className="nav-link" href="/profile">Profile</a></li>
           </ul>
           <ul className="form-inline justify-content-end">
-              <li className="nav-item mr-sm-2"><a className="nav-link" href="/login">Login</a></li>
-              <li className="nav-item my-2 my-sm-0"><a className="nav-link" href="/registration">Registration</a></li>
+              <li className="nav-item"><a className="nav-link" href="/login">Login</a></li>
+              <li className="nav-item"><a className="nav-link" href="/signup">Signup</a></li>
             </ul>
         </div>
       </nav>
