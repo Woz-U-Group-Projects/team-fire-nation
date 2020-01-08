@@ -12,7 +12,7 @@ class App extends Component {
 
 
   callAPI() {
-    fetch("http://localhost:3001/users")
+    fetch("http://localhost:3001/")
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }))
       .catch(err => err);
@@ -22,15 +22,15 @@ class App extends Component {
     this.callAPI();
   }
 
-  // render()
-  // {
-  //   return(
+  render()
+  {
+    return(
   //     <div className="App">
   //       <h1>This is something</h1>
-  //       <p className="App-intro">{this.state.apiResponse}</p>
+        <p className="App-intro">{this.state.apiResponse}</p>
   //     </div>
-  //   );
-  // }
+    );
+  }
 }
 
 export default App;

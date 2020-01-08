@@ -1,52 +1,83 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from '../component/Header';
-// import loginImg from "../../login.svg";
+
+
 
 /*___________________
-   Usefyl Links.
+   Useful Links.
    * Bootstrap:
    ** https://getbootstrap.com/docs/4.4/components/forms/
   ___________________
 
 ___________________*/
 
-const Login = () => (
-  <div>
-    <div className="container-fluid">
-    <Header title="Login" />
-      <form className="form">
-        <div className="row">
-          <div className="col ml-auto offset-sm-3">
-            <div className="form-group col-md">  
-              <label htmlFor="username" className="col-sm col-form-label">Username</label>  
-              <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
-              <small id="emailHelp" class="form-text text-muted">The Username used on account creation</small>
+class Login extends Component {
+  constructor() {
+    super()
+    this.state = {
+      Username: '',
+      Password: ''
+    }
+
+    this.onChange = this.onChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+
+  onChange(c){
+    this.setState({[c.target.name]: c.target.value})
+  }
+
+  onSubmit(s){
+    s.preventDefault()
+    const user = {
+      Username: this.state.username,
+      Password: this.state.password
+    }
+  }
+
+  render() {
+    return(
+      <div>
+        <div className="container-fluid">
+        <Header title="Login" />
+          <form className="form">
+            <div className="row">
+              <div className="col ml-auto offset-sm-3">
+                <div className="form-group col-md">  
+                  <label htmlFor="username" className="col-sm col-form-label">Username</label>  
+                  <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
+                  <small id="emailHelp" class="form-text text-muted">The Username used on account creation</small>
+                </div>
+                <div className="form-group col-md">
+                  <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
+                  <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
+                  <small id="emailHelp" class="form-text text-muted">Do Not Forget. At this time we cannot recover.</small>
+                </div>
+              </div>
             </div>
-            <div className="form-group col-md">
-              <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
-              <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
-              <small id="emailHelp" class="form-text text-muted">Do Not Forget. At this time we cannot recover.</small>
+            <div className="form-group row just">
+              <div class="col-sm-2">
+                <button type="button" className="btn btn-primary mb-2">Go back</button>
+              </div>
+              <div class="col-sm-2">
+                <button type="submit" className="btn btn-primary mb-2">Login</button>
+              </div>
             </div>
-          </div>
+          </form>  
         </div>
-        <div className="form-group row just">
-          <div class="col-sm-2">
-            <button type="button" className="btn btn-primary mb-2">Go back</button>
-          </div>
-          <div class="col-sm-2">
-            <button type="submit" className="btn btn-primary mb-2">Login</button>
-          </div>
-        </div>
-      </form>  
-    </div>
-  </div>
-);
+      </div>
+    )
+  }
+}
+
+
 
 export default Login;
 
 /*============================
 Old Code [Orignal, Protype, Draft] 
 ==============================
+Benjamin Code: 
  export class Login extends React.Component {
    constructor(props) {
      super(props);
@@ -87,5 +118,38 @@ Old Code [Orignal, Protype, Draft]
      );
    }
  }
+
+ Alvin Code: 
+ const Login = () => (
+  <div>
+    <div className="container-fluid">
+    <Header title="Login" />
+      <form className="form">
+        <div className="row">
+          <div className="col ml-auto offset-sm-3">
+            <div className="form-group col-md">  
+              <label htmlFor="username" className="col-sm col-form-label">Username</label>  
+              <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
+              <small id="emailHelp" class="form-text text-muted">The Username used on account creation</small>
+            </div>
+            <div className="form-group col-md">
+              <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
+              <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
+              <small id="emailHelp" class="form-text text-muted">Do Not Forget. At this time we cannot recover.</small>
+            </div>
+          </div>
+        </div>
+        <div className="form-group row just">
+          <div class="col-sm-2">
+            <button type="button" className="btn btn-primary mb-2">Go back</button>
+          </div>
+          <div class="col-sm-2">
+            <button type="submit" className="btn btn-primary mb-2">Login</button>
+          </div>
+        </div>
+      </form>  
+    </div>
+  </div>
+);
 
 ============================*/

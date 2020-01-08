@@ -1,66 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../component/Header';
 
 
-const Registration = () => (
-    <div>
-        <Header title="Registration" />
-        
-        <form className="form" id="signup" name="signup" method="POST" acrion="/cgdb/users">
-            <div className="form-row">
-                <div className="form-group col-md-6">
-                    <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
-                    <input className="form-control " id="" type="email" name="email" placeholder="Email" aria-describedby="emailHelp"/>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div className="form-group col-md-6">
-                    <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
-                    <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
-                    <small id="emailHelp" class="form-text text-muted">Do Not Forget. At this time we cannot recover. </small>
-                </div>
-            </div>
-            <div className="form-row">
-                <label htmlFor="firstname" className="col-sm col-form-label">Name
-                    <div className="form-row">
-                        <div className="form-group col-sm">
-                            <input className="form-control " id="" type="text" name="firstname" placeholder="First Name" aria-describedby="firstnameHelp"/>
-                            <small id="firstnameHelp" class="form-text text-muted">Will not be visable to others.</small>
-                        </div>
-                        <div className="form-group col-sm">
-                            <input className="form-control " id="" type="text" name="lastname" placeholder="Last Name" aria-describedby="lastnameHelp"/>
-                            <small id="lastnameHelp" class="form-text text-muted">Will not be visable to others.</small>
-                        </div>
-                    </div>
-                </label>
-                <label htmlFor="username" className="col-sm col-form-label">Username
-                    <div className="form-group col-sm-6">    
-                        <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
-                        <small id="emailHelp" class="form-text text-muted">Public Name that will be view by others</small>
-                    </div>
-                </label>
-            </div>
-            
-            <div className="form-row">
-                <div className="col-sm-2">
-                    <button type="button" className="btn btn-primary mb-2">Go back</button>
-                </div>
-                <div className="col-sm-2">
-                    <button type="submit" className="btn btn-primary mb-2">Signup</button>
-                </div>
-            </div>
-            
-            
-        </form>
-    </div>
-);
 
-export default Registration;
+const Signup = () => (  
+  <div>
+    <Header title="Signup" />
+
+    <form className="form" id="signup" name="signup" method="POST" action="/signup">
+      <div className="form-row">
+        <div className="form-group col-md-6">
+            <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
+            <input className="form-control " id="" type="email" name="email" placeholder="Email" aria-describedby="emailHelp"/>
+            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div className="form-group col-md-6">
+            <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
+            <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
+            <small id="emailHelp" className="form-text text-muted">Do Not Forget. At this time we cannot recover. </small>
+        </div>
+        <div className="form-group col-sm">
+          <label htmlFor="firstname" className="col-sm col-form-label">Name</label>
+          <input className="form-control " id="" type="text" name="firstname" placeholder="First Name" aria-describedby="firstnameHelp"/>
+          <small id="firstnameHelp" className="form-text text-muted">Will not be visable to others.</small>
+        </div>
+        <div className="form-group col-sm">
+          <label htmlFor="LastName" className="col-sm col-form-label">Name</label>
+          <input className="form-control " id="" type="text" name="LastName" placeholder="Last Name" aria-describedby="lastnameHelp"/>
+          <small id="lastnameHelp" className="form-text text-muted">Will not be visable to others.</small>
+        </div> 
+        <div className="form-group col-sm-6">  
+          <label htmlFor="username" className="col-sm col-form-label">Username </label>
+          <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
+          <small id="emailHelp" className="form-text text-muted">Public Name that will be view by others</small>
+        </div> 
+      </div>
+              
+      <div className="form-row">
+          <div className="col-sm-2">
+              <button type="button" className="btn btn-primary mb-2">Go back</button>
+          </div>
+          <div className="col-sm-2">
+              <button type="submit" className="btn btn-primary mb-2">Signup</button>
+          </div>
+      </div>
+    </form>
+  </div>
+)
+    
+
+export default Signup;
 
 
 
 /*============================
 Old Code [Orignal, Protype, Draft] 
 ==============================
+benjamin Code: 
+
 import ReactDOM from 'react-dom';
 import registrationImg from "../../registrationImg.svg";
 
@@ -113,4 +110,54 @@ export class Registration extends React.Component {
   }
 }
 
+
+Alvin Code: 
+<div>
+  <Header title="Signup" />
+  
+  <form className="form" id="signup" name="signup" method="POST" action="/cgdb/users">
+    <div className="form-row">
+        <div className="form-group col-md-6">
+            <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
+            <input className="form-control " id="" type="email" name="email" placeholder="Email" aria-describedby="emailHelp"/>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div className="form-group col-md-6">
+            <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
+            <input className="form-control " id="" type="password" name="password" placeholder="password" aria-describedby="emailHelp" />
+            <small id="emailHelp" class="form-text text-muted">Do Not Forget. At this time we cannot recover. </small>
+        </div>
+    </div>
+
+    <div className="form-row">
+        <label htmlFor="firstname" className="col-sm col-form-label">Name
+            <div className="form-row">
+                <div className="form-group col-sm">
+                    <input className="form-control " id="" type="text" name="firstname" placeholder="First Name" aria-describedby="firstnameHelp"/>
+                    <small id="firstnameHelp" class="form-text text-muted">Will not be visable to others.</small>
+                </div>
+                <div className="form-group col-sm">
+                    <input className="form-control " id="" type="text" name="lastname" placeholder="Last Name" aria-describedby="lastnameHelp"/>
+                    <small id="lastnameHelp" class="form-text text-muted">Will not be visable to others.</small>
+                </div>
+            </div>
+        </label>
+        <label htmlFor="username" className="col-sm col-form-label">Username
+            <div className="form-group col-sm-6">    
+                <input className="form-control " id="" type="text" name="username" placeholder="username" aria-describedby="emailHelp"/>
+                <small id="emailHelp" class="form-text text-muted">Public Name that will be view by others</small>
+            </div>
+        </label>
+    </div>
+      
+    <div className="form-row">
+        <div className="col-sm-2">
+            <button type="button" className="btn btn-primary mb-2">Go back</button>
+        </div>
+        <div className="col-sm-2">
+            <button type="submit" className="btn btn-primary mb-2">Signup</button>
+        </div>
+    </div>
+  </form>
+</div>
 ============================*/
