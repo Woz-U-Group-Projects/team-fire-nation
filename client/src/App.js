@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,6 +8,8 @@ class App extends Component {
     super(props);
     this.state = { apiResponse: "" };
   }
+
+
 
   callAPI() {
     fetch("http://localhost:3001/users")
@@ -20,15 +22,15 @@ class App extends Component {
     this.callAPI();
   }
 
-  render()
-  {
-    return(
-      <div className="App">
-        <h1>This is something</h1>
-        <p className="App-intro">{this.state.apiResponse}</p>
-      </div>
-    );
-  }
+  // render()
+  // {
+  //   return(
+  //     <div className="App">
+  //       <h1>This is something</h1>
+  //       <p className="App-intro">{this.state.apiResponse}</p>
+  //     </div>
+  //   );
+  // }
 }
 
 export default App;
