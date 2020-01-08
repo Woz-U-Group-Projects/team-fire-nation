@@ -11,7 +11,7 @@ const Signup = () => (
       <div className="form-row">
         <div className="form-group col-md-6">
             <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
-            <input className="form-control " id="" type="email" name="email" placeholder="Email" aria-describedby="emailHelp"/>
+            <input className="form-control " id="" type="text" name="email" placeholder="Email" aria-describedby="emailHelp"/>
             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div className="form-group col-md-6">
@@ -20,13 +20,13 @@ const Signup = () => (
             <small id="emailHelp" className="form-text text-muted">Do Not Forget. At this time we cannot recover. </small>
         </div>
         <div className="form-group col-sm">
-          <label htmlFor="firstname" className="col-sm col-form-label">Name</label>
-          <input className="form-control " id="" type="text" name="firstname" placeholder="First Name" aria-describedby="firstnameHelp"/>
+          <label htmlFor="FirstName" className="col-sm col-form-label">FirstName</label>
+          <input className="form-control " id="" type="text" name="FirstName" placeholder="FirstName" aria-describedby="firstnameHelp"/>
           <small id="firstnameHelp" className="form-text text-muted">Will not be visable to others.</small>
         </div>
         <div className="form-group col-sm">
-          <label htmlFor="LastName" className="col-sm col-form-label">Name</label>
-          <input className="form-control " id="" type="text" name="LastName" placeholder="Last Name" aria-describedby="lastnameHelp"/>
+          <label htmlFor="LastName" className="col-sm col-form-label">Last Name</label>
+          <input className="form-control " id="" type="text" name="LastName" placeholder="LastName" aria-describedby="lastnameHelp"/>
           <small id="lastnameHelp" className="form-text text-muted">Will not be visable to others.</small>
         </div> 
         <div className="form-group col-sm-6">  
@@ -35,7 +35,7 @@ const Signup = () => (
           <small id="emailHelp" className="form-text text-muted">Public Name that will be view by others</small>
         </div> 
       </div>
-              
+
       <div className="form-row">
           <div className="col-sm-2">
               <button type="button" className="btn btn-primary mb-2">Go back</button>
