@@ -66,7 +66,14 @@ router.get('/profile', function (req, res, next) {
     authService.verifyUser(token)
       .then(user => {
         if (user) {
-          res.send(JSON.stringify(user));
+          let profile = {
+            UserId: user.UserID,
+            FirstName: user.FirstName,
+            LastName: user.LastName,
+            Email: user.Email,
+            Username: user.Username,
+          }
+          res.send(JSON.stringify(profile));
         } else {
           res.status(401);
           res.send('Invalid authentication token');
