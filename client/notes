@@ -25,6 +25,7 @@ initial migration
 - Other
 -- config/config.json:
 Password and DB name set to work with MySQL Workbench
-
+-- Added Screens & Component to client App
+-- Set up routing
 
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,8 +9,10 @@ class App extends Component {
     this.state = { apiResponse: "" };
   }
 
+
+
   callAPI() {
-    fetch("http://localhost:3001/users")
+    fetch("http://localhost:3001/")
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }))
       .catch(err => err);
@@ -23,10 +25,10 @@ class App extends Component {
   render()
   {
     return(
-      <div className="App">
-        <h1>This is something</h1>
+  //     <div className="App">
+  //       <h1>This is something</h1>
         <p className="App-intro">{this.state.apiResponse}</p>
-      </div>
+  //     </div>
     );
   }
 }
