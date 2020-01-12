@@ -19,8 +19,10 @@ class Profile extends React.Component {
             <div>
             <Header title="Profile" />
             {this.state.profile && (
-                <div>
+                <div id="profile-container">
                     <h4>{this.state.profile.FirstName} {this.state.profile.LastName}</h4>
+                    <hr />
+                    <h6>{this.state.profile.Username}</h6>
                 </div>
             )}
             <h2></h2>

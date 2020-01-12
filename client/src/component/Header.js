@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-const Header = ({ title }) => (
+const Header = ({ title, profile  }) => (
     <div>
       <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <a className="navbar-brand" href="/">
@@ -17,10 +17,17 @@ const Header = ({ title }) => (
             <li className="nav-item"><a className="nav-link" href="/forum">Forum</a></li> 
             <li className="nav-item"><a className="nav-link" href="/profile">Profile</a></li>
           </ul>
-          <ul className="form-inline justify-content-end">
+          {profile ?
+          ( <ul>
+            <li className="nav-item"><a className="nav-link" href="/profile">{profile.username}</a></li>
+          </ul>  )
+          : ( <ul className="form-inline justify-content-end">
               <li className="nav-item"><a className="nav-link" href="/login">Login</a></li>
               <li className="nav-item"><a className="nav-link" href="/signup">Signup</a></li>
             </ul>
+          )
+          }
+ 
         </div>
       </nav>
       
