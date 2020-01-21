@@ -6,9 +6,7 @@ const Forum = () => (
         <Header title="Forum" />
         <div class="card">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Coming Soon!</li>
             </ul>
         </div>
     </div>
